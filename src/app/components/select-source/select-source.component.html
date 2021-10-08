@@ -1,0 +1,13 @@
+<div fxLayout="column" [formGroup]="form">
+  <h2>Select Source:</h2>
+
+  <div fxLayout="row">
+    <div fxFlex="80">
+      <span>{{ form.value.file || 'Please Select a File' }}</span>
+    </div>
+    <div fxFlex="20">
+      <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+      <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+    </div>
+  </div>
+</div>

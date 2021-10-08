@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>
+  <span>Config</span>
+  <span fxFlex></span>
+  <span>
+    <a (click)="download()">
+      <mat-icon>download</mat-icon>
+    </a>
+  </span>
+</h2>
+<mat-dialog-content class="mat-typography">
+
+    <form [formGroup]="form">
+      <div fxLayout="column" fxLayoutGap="10px">
+        <mat-form-field class="example-full-width">
+          <mat-label>Wii U Common Key</mat-label>
+          <input matInput formControlName="commonKey" placeholder="Google It">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Wii Common Key</mat-label>
+          <input matInput formControlName="wiiCommonKey" placeholder="Google It">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Update Server</mat-label>
+          <input matInput formControlName="updateServer" placeholder="I guess you'll figure out the right URL">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Tagaya Latest</mat-label>
+          <input matInput formControlName="tagayaLatest" placeholder="I guess you'll figure out the right URL">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Tagaya Version List</mat-label>
+          <input matInput formControlName="tagayaVersionList" placeholder="I guess you'll figure out the right URL">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Rhythm Heaven Fever [USA] Title Key</mat-label>
+          <input matInput formControlName="titleKey" placeholder="Find it on 'that one title key site'">
+        </mat-form-field>
+      </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions fxLayoutAlign="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button cdkFocusInitial (click)="save()">Save</button>
+</mat-dialog-actions>

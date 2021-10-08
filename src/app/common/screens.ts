@@ -1,0 +1,6 @@
+export enum Screens {
+  WELCOME,
+  SOURCE_SELECT,
+  WIIU_CONFIG,
+  GAMEPADC_CONFIG,
+}

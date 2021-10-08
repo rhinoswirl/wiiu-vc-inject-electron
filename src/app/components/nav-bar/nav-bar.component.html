@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+  <div>Acknowledgements</div>
+  <div fxFlex></div>
+  <button id="previous" type="button" mat-button (click)="previous()" *ngIf="hasPrevious">
+    Previous
+  </button>
+  <button id="next" type="button" mat-button (click)="next()" *ngIf="hasNext">
+    Next
+  </button>
+</div>
